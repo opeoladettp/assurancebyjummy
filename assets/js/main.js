@@ -244,9 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(error => {
                 console.error("Form submission error:", error);
-                // Fallback to offline visual success for offline local testing
-                showLuxuryNotification("info", "Inquiry saved locally. Configure Web3Forms key to receive emails.", "#C5A059");
-                contactForm.reset();
+                showLuxuryNotification("error", "Unable to send message. Please try again or contact us directly.", "#E07A5F");
             })
             .finally(() => {
                 submitBtn.disabled = false;
