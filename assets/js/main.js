@@ -224,12 +224,13 @@ document.addEventListener("DOMContentLoaded", () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>Sending...</span><span class="material-symbols-outlined">hourglass_empty</span>`;
             
-            const formData = new FormData(contactForm);
-            
-            // Send request to Web3Forms API
-            fetch("https://api.web3forms.com/submit", {
+            const formData = Object.fromEntries(new FormData(contactForm));
+
+            // Send request to self-hosted Form API
+            fetch("https://form-submition-server.onrender.com/submit", {
                 method: "POST",
-                body: formData
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
             })
             .then(async (response) => {
                 let json = await response.json();
