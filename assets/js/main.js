@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const formData = Object.fromEntries(new FormData(contactForm));
 
             // Send request to self-hosted Form API
-            fetch("https://api.formsend.ezeroandone.io/submit", {
+            fetch("https://formsend.ezeroandone.io/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
