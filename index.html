@@ -333,9 +333,10 @@
                 </ul>
             </div>
             <div>
-                <form id="contactForm" class="contact-form">
+                <form method="POST" action="https://api.formsend.ezeroandone.io/submit" id="contactForm" class="contact-form">
+                    <input type="hidden" name="api_key" value="f75fcd7d608fec83578ba9c08bef5d8c13c163e2ebb757e52c79d076127727c3" />
                     <!-- Self-hosted Form API config -->
-                    <input type="hidden" name="api_key" value="1bcee6bfbf08d0fabbbecaa884c5921d8272023ce4b634a0805ba97a9c6e1d9f">
+                    
                     <input type="hidden" name="to_email" value="info@assurancebyjummy.com.ng">
                     <input type="hidden" name="subject" value="New Inquiry from assurancebyjummy.com.ng">
                     
